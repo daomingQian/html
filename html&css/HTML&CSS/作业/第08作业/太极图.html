@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;list-style: none;text-decoration:none ;}
+        body{
+            background-color: rgb(220,219,220);
+            /* width: 1000px;
+            height: 1000px; */
+        }
+        .radius{
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(black 50%,white 50%);
+            font-size: 0;
+            margin: 50px auto;
+        }
+        ul{
+            width: 100%;
+            height: 100%;
+        }
+        ul li{
+            box-sizing: border-box;
+            display: inline-block;
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            margin-top: 25%;
+            overflow: hidden;
+        }
+        .r1{
+            background-color: black;
+        }
+        .r2{
+            background-color: white;
+        }
+        p{
+            width: 20%;
+            height: 20%;
+            margin: 40% auto;
+            border-radius: 50%;
+        }
+        .r1 p{
+            background-color: white;
+        }
+        .r2 p{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="radius">
+        <ul>
+            <li class="r1"><p></p></li>
+            <li class="r2"><p></p></li>
+        </ul>
+    </div>
+</body>
+</html>

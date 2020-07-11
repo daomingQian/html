@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style>
+		div{
+			width:200px;
+			height:200px;
+			background-color:pink;
+			
+		}
+		p{
+			width:100px;
+			height:100px;
+			background-color:yellow;
+		}
+		div:hover p{
+			/* width:200px; */
+			height:200px;
+			background-color:yellow;
+			/* transition-property:width,height;
+			transition-duration:3s;
+			transition-delay:0s;
+			transition-timing-function:cubic-bezier(.03,1.58,.89,-0.69); */
+			transition:height 3s 1s cubic-bezier(.03,1.58,.89,-0.69);
+		}
+	</style>
+ </head>
+ <body>
+	<div>
+		<p>p标签</p>
+	</div>
+ </body>
+</html>

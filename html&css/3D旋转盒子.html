@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D旋转盒子</title>
+<!--    网页的名字-->
+    <style>
+        body{
+            background-color: #ddd;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+        .main{
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 400px;
+            /*宽度*/
+            height: 400px;
+            /*高度*/
+            border: 1px solid #67cdcc;
+            /*边框: 宽度 样式 颜色*/
+            margin: 100px auto 0;
+            /*外边距: 上下  左右auto*/
+            /*transform-style: preserve-3d;*/
+            transform-origin: center center 126px;
+            animation: move 4s infinite linear;
+
+        }
+        p{
+            position: absolute;
+            top: 0px;
+            /*离参照物顶部的距离*/
+            left: 0px;
+            /*离参照物左部的距离*/
+            width: 250px;
+            height: 250px;
+            border: 1px solid pink;
+            margin: 0;
+            transition: 1s;
+        }
+        /*p:nth-child(6){*/
+        /*    transform-origin: bottom;*/
+        /*    transform: rotateX(-90deg);*/
+        /*}*/
+        /*p:nth-child(5){*/
+        /*    transform-origin: top;*/
+        /*    transform: rotateX(90deg);*/
+        /*}*/
+        /*p:nth-child(4){*/
+        /*    transform-origin: left;*/
+        /*    transform: rotateY(-90deg);*/
+        /*}*/
+        /*p:nth-child(3){*/
+        /*    transform-origin: right;*/
+        /*    transform: rotateY(90deg);*/
+        /*}*/
+        /*p:nth-child(2){*/
+        /*    transform: translateZ(250px);*/
+        /*}*/
+        /*p:nth-child(1){*/
+        /*    transform: rotateY(180deg);*/
+        /*}*/
+        /*@keyframes move {*/
+        /*    0%{transform: rotateY(0deg);}*/
+        /*    100%{transform: rotateY(360deg);}*/
+        /*}*/
+        /*img{*/
+        /*    opacity: 0.8;*/
+        /*}*/
+        /*.main:hover p:nth-child(6){*/
+        /*    transform-origin: bottom;*/
+        /*    transform: rotateX(-90deg) translateZ(150px);*/
+        /*}*/
+        /*.main:hover p:nth-child(5){*/
+        /*    transform-origin: top;*/
+        /*    transform: rotateX(90deg) translateZ(150px);*/
+        /*}*/
+        /*.main:hover p:nth-child(4){*/
+        /*    transform-origin: left;*/
+        /*    transform: rotateY(-90deg) translateZ(150px);*/
+        /*}*/
+        /*.main:hover p:nth-child(3){*/
+        /*    transform-origin: right;*/
+        /*    transform: rotateY(90deg) translateZ(150px);*/
+        /*}*/
+        /*.main:hover p:nth-child(2){*/
+        /*    transform: translateZ(400px);*/
+        /*}*/
+        /*.main:hover p:nth-child(1){*/
+        /*    transform: rotateY(180deg) translateZ(150px);*/
+        /*}*/
+        .nav{
+            position: fixed;
+            top: 200px;
+            left: 500px;
+            width: 200px;
+            height: 200px;
+            background-color: #096;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <p><img src="images/01.jpg" alt=""></p>
+<!--图片标签-->
+        <p><img src="images/02.jpg" alt=""></p>
+        <p><img src="images/03.jpg" alt=""></p>
+        <p><img src="images/04.jpg" alt=""></p>
+        <p><img src="images/05.jpg" alt=""></p>
+        <p><img src="images/06.jpg" alt=""></p>
+    </div>
+    <div class="nav"></div>
+</body>
+</html>
+
+
+<!--transform: 变化    旋转  平移-->
+
+<!--position: 定位  :3种定位-->
+<!--    1 绝对定位 absolute  脱离文档流    参照物:带有定位属性的父级元素(默认参照物是html)-->
+<!--    2 相对定位 relative  不脱离文档流  参照物: 页面中原来的位置-->
+<!--    3 固定定位 fixed--  参照物:body标签>
+
+公开课只讲到了 案例需要用到的基础html 和css知识
+向往更加深入学习前端技术的话  可以加入我们的企业全栈班
+企业全栈班
+    1阶段 html  和 css
+    2阶段  javascript
+    3阶段  框架 vue  node
+
+    学完之后就可以找前端工作了  10k  3 -5工作经验  50k
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style>
+		*{padding: 0;margin: 0; list-style:none;text-decoration: none; }
+		div.nav{
+			width:1500px;
+			height:600px;
+			margin: 80px auto;
+		}
+		ul{position: relative;}
+		ul > li{
+			width:300px;
+			height:600px;
+			float:left;
+		}
+		ul > li > img{
+			position: absolute;
+			top:0px;
+			transition:0.5s;
+		}
+		ul > li:hover img{
+			position: absolute;
+			top:-40px;
+			
+			/* transition-timing-function:cubic-bezier(1,.01,1,.42); */
+			/* transition-delay:1s; */
+		}
+	</style>
+ </head>
+ <body>
+	<div class="nav">
+		<ul>
+			<li><img src="img/01.jpg" alt=""></li>
+			<li><img src="img/02.jpg" alt=""></li>
+			<li><img src="img/03.jpg" alt=""></li>
+			<li><img src="img/04.jpg" alt=""></li>
+			<li><img src="img/05.jpg" alt=""></li>
+		</ul>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+			list-style:none;
+		}
+		div.nav{
+			width:190px;
+			height:20px;
+			background-color:pink;
+		}
+		.nav > ul >li{
+			float:left;
+			margin-left:10px;
+			cursor:pointer;
+		}
+		.nav > ul >li ul{
+			display:none;
+			background-color:#ff0000;
+			text-align:center;
+			
+		}
+		.list01 > div:hover ul{
+			display:block;
+			
+		}
+		.list02 > div:hover ul{
+			display:block;
+			
+		}
+		.list03 > div:hover ul{
+			display:block;
+			
+		}
+	</style>
+ </head>
+ <body>
+	<div class="nav">
+		<ul>
+			<li class="list01">
+				<div>汽车之家
+					<ul>
+						<li>奥迪</li>
+						<li>奔驰</li>
+						<li>宝马</li>
+					</ul>
+				</div>			
+			</li>
+			<li class="list02">
+				<div>化妆品
+					<ul>
+						<li>口红</li>
+						<li>面膜</li>
+						<li>气垫</li>
+					</ul>
+				</div>
+				
+			</li>
+			<li class="list03">
+				<div>手机
+					<ul>
+						<li>华为</li>
+						<li>苹果</li>
+						<li>小米</li>
+					</ul>
+				</div>		
+			</li>
+		</ul>
+	</div>
+ </body>
+</html>

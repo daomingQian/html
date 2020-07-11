@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8776692",
+      "name": "message",
+      "font_class": "icon-test",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "8776842",
+      "name": "search",
+      "font_class": "icon-test1",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "10085984",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "12513595",
+      "name": "A",
+      "font_class": "A",
+      "unicode": "e86b",
+      "unicode_decimal": 59499
+    },
+    {
+      "icon_id": "13124887",
+      "name": "B",
+      "font_class": "B",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    }
+  ]
+}

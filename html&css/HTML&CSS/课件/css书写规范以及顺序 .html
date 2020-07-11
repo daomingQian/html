@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS书写及顺序</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#tit{
+				width: 350px;
+				margin:20px auto;
+			}
+			fieldset{
+				margin: 10px;
+				padding: 15px;
+				color: black;
+				background-color:blanchedalmond ;
+			}
+			legend{
+				padding: 5px;
+				background-color:yellow;
+			}
+			.content-no1{
+				margin: 0 20px;
+				padding: 10px 30px;
+				font-size: 18px;
+				background-color: rgba(112,35,118,0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="tit"><h1>CSS书写规范以及顺序</h1></div>
+		<fieldset id="">
+			<legend><h3> CSS书写顺序</h3></legend>
+			<p class="content-no1">
+				1.位置属性(position, top, right, z-index, display, float等)<br />
+				2.大小(width, height, padding, margin)<br />
+				3.文字系列(font, line-height, letter-spacing, color- text-align等)<br />
+				4.背景(background, border等)<br />
+				5.其他(animation, transition等)<br />
+			</p>
+		</fieldset>
+		<fieldset id="">
+			<legend><h3>CSS书写规范</h3> </legend>
+			<p class="content-no1">
+				1.CSS有些属性是可以缩写的，比如padding,margin,font等等，<br />
+				这样精简代码同时又能提高用户的阅读体验。
+				2.去掉小数点前的“0”<br />
+				比如：background-color: rgba(0,0,0,0.5);==>background-color: rgba(0,0,0,.5);<br />
+				
+			</p>
+		</fieldset>
+		<fieldset id="">
+			<legend><h3> 连字符CSS选择器命名规范</h3></legend>
+			<p class="content-no1">
+				1.长名称或词组可以使用中横线来为选择器命名。<br />
+				2.不建议使用“_”下划线来命名CSS选择器，为什么呢？<br />
+				&nbsp;&nbsp;1).输入的时候少按一个shift键；<br />
+				&nbsp;&nbsp;2).浏览器兼容问题 （比如使用_tips的选择器命名，在IE6是无效的）<br />
+				&nbsp;&nbsp;3).能良好区分JavaScript变量命名（JS变量命名是用“_”）<br />
+			</p>
+		</fieldset>
+		<fieldset id="">
+			<legend><h3>不要随意使用Id</h3> </legend>
+			<p class="content-no1">
+				1、id在JS是唯一的，不能多次使用，<br />
+					而使用class类选择器却可以重复使用，<br />
+					另外id的优先级优先与class，所以id应该按需使用，而不能滥用。
+			</p>
+		</fieldset>
+		<fieldset id="">
+			<legend><h3>CSS命名的一些规范</h3> </legend>
+				<h4>(一)网页内容类</h4>
+				<p class="content-no1">
+					标题: title <---->摘要: summary<br />
+					箭头： arrow<---->商标： label<br />
+					网站标志： logo<---->转角/圆角： corner<br />
+					横幅广告： banner<---->子菜单： subMenu<br />
+					搜索： search<---->搜索框： searchBox<br />
+					登录： login<---->登录条：loginbar<br />
+					工具条： toolbar<---->下拉： drop<br />
+					标签页： tab<---->当前的： current<br />
+					列表： list<---->滚动： scroll<br />
+					服务： service<---->提示信息： msg<br />
+					热点：hot<---->新闻： news<br />
+					小技巧： tips<---->下载： download<br />
+					栏目标题： title<---->热点： hot<br />
+					加入： joinus<---->注册： regsiter<br />
+					指南： guide<---->友情链接： friendlink<br />
+					状态： status<---->版权： copyright<br />
+					按钮： btn<---->合作伙伴： partner<br />
+					投票： vote<---->左右中：left right center
+				</p>
+				<h4>(二)注释的写法:</h4>
+				<p class="content-no1">
+					/* Footer */<br />
+					内容区<br />
+					/* End Footer */<br />
+				</p>
+				<h4>(三)id的命名:</h4>
+				<p class="content-no1">
+					(1)页面结构<br />
+					容器: container<br />
+					页头：header<br />
+					内容：content/container<br />
+					页面主体：main<br />
+					页尾：footer<br />
+					导航：nav<br />
+					侧栏：sidebar<br />
+					栏目：column<br />
+					页面外围控制整体布局宽度：wrapper<br />
+					左右中：left right center<br />
+					(2)导航<br />
+					导航：nav<br />
+					主导航：mainbav<br />
+					子导航：subnav<br />
+					顶导航：topnav<br />
+					边导航：sidebar<br />
+					左导航：leftsidebar<br />
+					右导航：rightsidebar<br />
+					菜单：menu<br />
+					子菜单：submenu<br />
+					标题: title<br />
+					摘要: summary<br />
+					(3)功能<br />
+					标志：logo<br />
+					广告：banner<br />
+					登陆：login<br />
+					登录条：loginbar<br />
+					注册：regsiter<br />
+					搜索：search <br />
+					功能区：shop<br />
+					标题：title<br />
+					加入：joinus<br />
+					状态：status<br />
+					按钮：btn<br />
+					滚动：scroll<br />
+					标签页：tab<br />
+					文章列表：list<br />
+					提示信息：msg<br />
+					当前的: current<br />
+					小技巧：tips<br />
+					图标: icon<br />
+					注释：note<br />
+					指南：guild<br />
+					服务：service<br />
+					热点：hot<br />
+					新闻：news<br />
+					下载：download<br />
+					投票：vote<br />
+					合作伙伴：partner<br />
+					友情链接：link<br />
+					版权：copyright
+				</p>
+				<h4>(四)class的命名:</h4>
+				<p class="content-no1">
+					(1)颜色:使用颜色的名称或者16进制代码,如<br />
+					.red { color: red; }<br />
+					.f60 { color: #f60; }<br />
+					.ff8600 { color: #ff8600; }<br />
+					(2)字体大小,直接使用"font+字体大小"作为名称,如<br />
+					.font12px { font-size: 12px; }<br />
+					.font9pt {font-size: 9pt; }<br />
+					(3)对齐样式,使用对齐目标的英文名称,如<br />
+					.left { float:left; }<br />
+					.bottom { float:bottom; }<br />
+					(4)标题栏样式,使用"类别+功能"的方式命名,如<br />
+					.barnews { }<br />
+					.barproduct { }<br />
+					==>注意事项::<br />
+					1.一律小写;<br />
+					2.尽量用英文;<br />
+					3.不加中杠和下划线;<br />
+					4.尽量不缩写，除非一看就明白的单词.<br />
+					==>推荐的 CSS 书写顺序<br />
+					//显示属性<br />
+					display<br />
+					list-style<br />
+					position<br />
+					float<br />
+					clear<br />
+					//自身属性<br />
+					width<br />
+					height<br />
+					margin<br />
+					padding<br />
+					border<br />
+					background<br />
+					//文本属性<br />
+					color<br />
+					font<br />
+					text-decoration<br />
+					text-align<br />
+					vertical-align<br />
+					white-space<br />
+					other text<br />
+					content
+				</p>
+		</fieldset>
+		
+	</body>
+</html>

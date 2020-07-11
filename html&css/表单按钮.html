@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style>
+		input[type="text"]{
+			width:100px;
+		}
+		.man{
+			position:fixed;
+			bottom:0px;
+			right:0px;
+			width:200px;
+			height:200px;
+			background-color:pink
+		}
+		.woman{
+			position:fixed;
+			bottom:0px;
+			left:0px;
+			width:200px;
+			height:200px;
+			background-color:blue;
+		}
+	</style>
+ </head>
+ <body>
+  <form action=""  method="get" >
+	<fieldset>
+		<legend>文本框和密码框</legend>
+		<input type="text" name="aaa" value="" placeholder="默认值">
+		<input type="text" name="bbb" value="" placeholder="默认值">
+		<input type="text" name="ccc" value="" placeholder="默认值">
+		<input type="text" name="ddd" value="" placeholder="默认值" disabled>
+		<input type="password">
+	</fieldset>
+	<fieldset>
+		<legend>单选框和多选框</legend>
+		<input type="radio" name="性别" value="男" id=01 checked>
+		<label for="01" class="man">man</label>
+		<input type="radio" name="性别" value="女" id=02>
+		<label for="02" class="woman">woman</label>
+		<input type="checkbox" name="最喜欢的水果" value="西瓜" disabled>西瓜
+		<input type="checkbox" name="最喜欢的水果" value="苹果">苹果
+		<input type="checkbox" name="最喜欢的水果" value="香蕉">香蕉
+	</fieldset>
+	<fieldset>
+	<legend>文件和按钮</legend>
+		<input type="file">
+		<input type="button" value="按钮" disabled><br>
+		<input type="email">
+		<input type="submit" value="百度一下"	name="wode">
+		<input type="reset">
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+	</fieldset>
+	
+  </form>
+  最受欢迎女主角
+  <select name="" id="df">
+	<option value="">请选择</option>
+	<option value="">天海翼</option>
+	<option value="">男</option>
+	<option value="">女</option>
+	<option value="">宇都宫紫苑</option>
+	<option value="">绫濑遥</option>
+  </select>
+ </body>
+</html>

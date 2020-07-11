@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+ <head>
+	  <meta charset="UTF-8">
+	  <title>Document</title>
+	  <link rel="stylesheet" href="./font_1/iconfont.css">
+	  <style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-decoration: none;
+		}
+		div.head{
+			width: 1226px;
+			height: 100px;
+			/* background-color: #adc; */
+			margin: 0 auto;
+		}
+		div.log{
+			position: relative;
+			overflow: hidden;
+			float: left;
+			width: 55px;
+			height: 55px;
+			margin-top: 22.5px;
+			cursor: pointer;
+			
+		}
+		div.log > .log_inner{
+			position: absolute;
+			top: 0;
+			left: -55px;
+			width: 110px;
+			height: 55px;
+			background-color: #FF6B00;
+			transition: .2s;
+		}
+		div.log .log_inner img{
+			display: block;
+			float: left;
+		}
+		div.log:hover > .log_inner {
+			left: 0px;
+			
+		}
+		div.head > .main{
+			float: left;
+			width: 700px;
+			height: 100px;
+			/* background-color: #cc0000; */
+			margin-left: 150px;
+		}
+		div.head > .main > ul a{
+			float: left;
+			display: block;
+			padding:39px 10px 39px;
+		}
+		div.head > .main > ul li{
+			color: #333;
+			transition: .3s;
+		}
+		div.head > .main > ul li:hover{
+			color: #ff6700;
+		}
+		input[type="text"]{
+			float: left;
+			display: block;
+			width: 225px;
+			height: 50px;
+			margin: 25px 0 0 20px;
+			padding: 0 10px;
+			border: 1px solid #e0e0e0;
+		}
+		input[type="text"]:focus{
+			border: 1px solid #ecd504;
+		}
+		input[type="submit"]{
+			width: 52px;
+			height: 52px;
+			background-color: rgba(0,0,0,0);
+			border: 1px solid #e0e0e0;
+			border-left: 0px;
+		}
+		.sub{
+			position: relative;
+			top: 25px;
+			float: left;
+			width: 52px;
+			height: 52px;
+			transition: .3s;
+		}
+		.sub span{
+			position: absolute;
+			top: 12px;
+			left: 12px;
+			display: block;
+			font-size: 25px;
+			font-weight: bolder;
+			color: #616161;
+			text-align: center;
+			/* background-color: greenyellow; */
+		}
+		.sub:hover{
+			background-color: #ff6700;
+			transition: .3s;
+			/* border: 1px solid #ff6700; */
+		}
+		.sub:hover span{
+			color: #fff;
+		}
+	  </style>
+ </head>
+ <body>
+	<div class="head">
+		<div class="log">
+			<div class="log_inner">
+				<img src="img/mi-home.png" alt="" width=55px height=55px>
+				<img src="img/logo-footer.png" alt="" width=55px height=55px>
+			</div>
+		</div>
+		<div class="main">
+			<ul>
+				<a href=""><li>小米手机</li></a>
+				<a href=""><li>Redmi 红米</li></a>
+				<a href=""><li>电视</li></a>
+				<a href=""><li>笔记本</li></a>
+				<a href=""><li>家电</li></a>
+				<a href=""><li>路由器</li></a>
+				<a href=""><li>智能硬件</li></a>
+				<a href=""><li>服务</li></a>
+				<a href=""><li>社区</li></a>
+			</ul>
+		</div>
+		<input type="text">
+		<div class="sub">
+			<span class="iconfont icon-icon-test1"></span>
+			<input type="submit" value="">
+		</div>
+		
+	</div>
+	
+ </body>
+</html>

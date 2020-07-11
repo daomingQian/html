@@ -1,0 +1,18 @@
+#TITLE=INI Files
+; Markdown syntax file written by ES-Computing.
+; This file is required for EditPlus to run correctly.
+
+#DELIMITER=,.?!;:/<>(){}[]"'=-#
+#QUOTATION1=
+#LINECOMMENT=^!#
+#LINECOMMENT2=^!>
+#COMMENTON=
+#COMMENTOFF=
+#CASE=y
+#NUMBER_PATTERN=css
+#SPECIAL_STX=markdown
+
+#KEYWORD
+#
+#KEYWORD
+#

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: #6c2022;
+        }
+        .btn{
+            position: absolute;
+            top: 500px;
+            left: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <div class="btn">
+        <button>向左</button>
+        <button>向右</button>
+        <button>向下</button>
+        <button>向上</button>
+        <button>启动</button>
+    </div>
+    <script>
+        let el = document.querySelector(".box")
+        function getStyle(el) {
+            let result = getComputedStyle(el)
+            return function (name) {
+                return parseFloat(result[name])
+            }
+        }
+        function setStyle(el, state) {
+            for(let name in state){
+                el.style[name] = state[name] + "px"
+            }
+        }
+
+        function ready(el) {
+            let stage = {
+                el: el,   //移动的元素
+                list: [],   //移动的队列
+                then: function (option) {
+                    this.list.push(option)
+                    return this
+                },
+                move: function () {   //具体怎么移动
+                    this.startTime = new Date()
+                    render()
+                }
+            }
+            function render(){
+                if(stage.list.length === 0) return
+                let nowTime = new Date()
+                if(nowTime-stage.startTime >= stage.list[0].duration){
+                    stage.list[0].success && stage.list[0].success()
+                    stage.list.shift()
+                    if (stage.list.length === 0) return;
+                    stage.startTime = new Date()
+                }
+                if(!stage.list[0].startStage){
+                    stage.list[0].startStage = {}
+                    stage.list[0].speedStage = {}
+
+                    for(let name in stage.list[0].state){
+                        stage.list[0].startStage[name] = getStyle(stage.el)(name)
+                        stage.list[0].speedStage[name] =
+                            (stage.list[0].state[name] - stage.list[0].startStage[name])/stage.list[0].duration
+                    }
+                }
+                let currentState = {}
+                for(let name in stage.list[0].state){
+                    currentState[name] = stage.list[0].startStage[name]+
+                            stage.list[0].speedStage[name]* (nowTime - stage.startTime)
+                }
+                setStyle(stage.el,currentState)
+                requestAnimationFrame(render)
+            }
+
+            return stage;
+        }
+
+        let moveList = [
+            {
+                name:"第一段动画",
+                duration: 1000,
+                state:{
+                    width: 200,
+                    height: 200,
+                    left: 100,
+                    top: 0
+                },
+                success: function () {
+                    console.log("第一段代码运行成功")
+                }
+            },
+            {
+                name:"第二段动画",
+                duration: 1000,
+                state:{
+                    width: 200,
+                    height: 200,
+                    left: 100,
+                    top: 100
+                },
+                success: function () {
+                    console.log("第二段代码运行成功")
+                }
+            },
+            {
+                name:"第三段动画",
+                duration: 1000,
+                state:{
+                    width: 200,
+                    height: 200,
+                    left: 0,
+                    top: 100
+                },
+                success: function () {
+                    console.log("第三段代码运行成功")
+                }
+            }
+        ]
+
+        let readyEl = ready(el)
+        let btns = document.querySelectorAll(".btn button")
+
+        let pos = {
+            x: 0,
+            y: 0
+        }
+        btns[0].onclick = function () {
+            pos.x -= 100
+            readyEl = readyEl.then({
+                duration: 1000,
+                state: {
+                    left: pos.x,
+                    top: pos.y
+                }
+            })
+        }
+        btns[1].onclick = function () {
+            pos.x += 100
+            readyEl = readyEl.then({
+                duration: 1000,
+                state: {
+                    left: pos.x,
+                    top: pos.y
+                }
+            })
+        }
+        btns[2].onclick = function () {
+            pos.y += 100
+            readyEl = readyEl.then({
+                duration: 1000,
+                state: {
+                    left: pos.x,
+                    top: pos.y
+                }
+            })
+        }
+        btns[3].onclick = function () {
+            pos.y -= 100
+            readyEl = readyEl.then({
+                duration: 1000,
+                state: {
+                    left: pos.x,
+                    top: pos.y
+                }
+            })
+        }
+
+        btns[4].onclick = function () {
+            readyEl.move()
+        }
+
+
+    </script>
+</body>
+</html>

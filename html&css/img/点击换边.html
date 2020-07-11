@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{padding: 0;margin: 0}
+        .main{
+            display: flex;
+            /*竖着放*/
+            /*flex-direction: column;*/
+            align-items: center;
+            /*可以换行*/
+            flex-wrap: wrap;
+            width: 300px;
+            height: 300px;
+            border: 1px solid pink;
+        }
+        .main > .left{
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            /*border-radius: 50%;*/
+        }
+        .main > .right{
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            /*border-radius: 50%;*/
+        }
+        .main > .other{
+            width: 150px;
+            height: 150px;
+            background-color: greenyellow;
+            /*border-radius: 50%;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="other">文字</div>
+    </div>
+
+    <script>
+        let other=document.querySelector(".other")
+        let left=document.querySelector(".left")
+        let right=document.querySelector(".right")
+        left.onclick = function(){
+            left.style.backgroundColor="blue"
+            right.style.backgroundColor="red"
+        }
+
+        right.onclick = function(){
+            left.style.backgroundColor="red"
+            right.style.backgroundColor="blue"
+        }
+
+        other.onclick=function () {
+            // other.innerText="风云"
+            other.innerHTML="<img src=\"./01.jpg\" alt=\"\">"
+        }
+    </script>
+</body>
+</html>
